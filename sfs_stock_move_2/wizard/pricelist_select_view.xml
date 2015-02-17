@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+    	<record id="view_pricelist_select_form" model="ir.ui.view">
+            <field name="name">pricelist.select.form</field>
+            <field name="model">pricelist.select</field>
+            <field name="arch" type="xml">
+                <form string="Select pricelist" create="false" version="7.0">
+                		<group col="4" colspan="4">
+                	    	<field name="pricelist_id" required="1"/>
+                		</group>
+                		<footer>
+							<button name="%(view_stock_product_movement_action)d" type="action" string="Proceed" context="{'pricelist_id':pricelist_id}" class="oe_highlight"/>
+	                   		or 
+							<button string="Cancel" class="oe_link" special="cancel"/>
+						</footer>
+                </form>
+            </field>
+    	</record>
+        
+    	<record id="view_pricelist_select_action" model="ir.actions.act_window">
+            <field name="name">Select pricelist</field>
+            <field name="res_model">pricelist.select</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_pricelist_select_form"/>
+            <field name="target">new</field>
+    	</record>
+    	<menuitem action="view_pricelist_select_action" id="view_pricelist_select_menu_sub" name="Stock movements by product" parent="sfs_stock_move_1.view_stock_movement_report_sub" sequence="2"/>
+    </data>
+</openerp>

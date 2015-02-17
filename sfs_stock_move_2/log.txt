@@ -1,0 +1,12 @@
+V 1.0 By Subhin P.V
+On 3rd October 2013
+	*Created Stock Move by product Analysis report 
+	
+V 1.1 By Subhin P V
+On 30th October 2013
+ 	* Added a wizard and modified the sale price field into a functional field 
+ 	that gets its values according to the pricelist selected in the record.
+ 
+ V 1.2 By Subhin P.V
+ On 31th October 2013
+ 	* Edited The PO file

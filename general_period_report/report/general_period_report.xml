@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+     <record id="view_general_period_tree" model="ir.ui.view">
+            <field name="name">general.period.report.tree</field>
+            <field name="model">general.period.report</field>
+            <field name="arch" type="xml">
+                <tree string="General period report" create="false" version="7.0">
+                    <field name="company_id"/>
+                    <field name="date_invoice"/>
+                    <field name="amount_total1" sum="Customer Invoice"/>
+                    <field name="amount_total2" sum="Customer Refunds"/>
+                    <field name="amount_total3" sum="Supplier Invoice"/>
+                    <field name="amount_total4" sum="Supplier Refunds"/>
+                    <field name="profit_amount" sum="Profit Amount"/>
+                    <field name="profit_percent"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_general_period_search" model="ir.ui.view">
+            <field name="name">general.period.report.search</field>
+            <field name="model">general.period.report</field>
+            <field name="arch" type="xml">
+                <search string="General period report">
+                   <group expand="0" string="Group By...">
+                        <filter string="Date" domain="[]" context="{'group_by':'date_invoice'}"/>
+                    	<filter string="Company" domain="[]" context="{'group_by':'company_id'}"/>
+                    </group>                    
+                </search>
+            </field>
+        </record>
+        
+        <record id="view_general_period_action" model="ir.actions.act_window">
+            <field name="name">General Period Report</field>
+            <field name="res_model">general.period.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_general_period_search"/>
+        </record>
+        
+       <menuitem id="view_general_period_sub" action="view_general_period_action" name="General Period Report" parent="account.final_accounting_reports" sequence="7"/>
+    	
+    </data>
+</openerp>

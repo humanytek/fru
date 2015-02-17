@@ -1,0 +1,7 @@
+V1.0 By Muhammad Ashif k
+On 9 September 2013
+	* Created The Module and added a analysis report in Sale Order. Also added a i18n Folder to translate into Spanish. 
+	
+V 1.1 By Subhin P V
+on 30 September 2013
+	* Added Total quantity to the column 4 Quantity in the Sales by product report.

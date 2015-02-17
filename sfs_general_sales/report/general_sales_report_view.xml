@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<menuitem name="Reports" id="menu_general_sale_report_main" parent="base.menu_base_partner" sequence="6"/> 
+    	
+    	<record id="view_general_sales_report_tree" model="ir.ui.view">
+            <field name="name">general.sales.report.tree</field>
+            <field name="model">general.sales.report</field>
+            <field name="arch" type="xml">
+                <tree string="General Sales Report" create="false">
+                    <field name="sale_order_no"/>
+                    <field name="sale_order_date"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total" sum="Total Amount"/>
+                </tree>
+            </field>
+        </record>
+		
+		<record id="view_general_sales_report_form" model="ir.ui.view">
+            <field name="name">general.sales.report.form</field>
+            <field name="model">general.sales.report</field>
+            <field name="arch" type="xml">
+                <form string="General Sales Report">
+                    <field name="sale_order_no"/>
+                    <field name="sale_order_date"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total"/>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_general_sales_report_search" model="ir.ui.view">
+            <field name="name">general.sales.report.search</field>
+            <field name="model">general.sales.report</field>
+            <field name="arch" type="xml">
+                <search string="General Sales Report">
+                	<field name="partner_id"/>
+                	<field name="sale_order_date"/>
+                    <filter string="Customer" name="partner_id" icon="terp-personal" domain="[]"/>
+                    <filter string="Date" icon="terp-personal" name="sale_order_date" domain="[]"/>
+                    <group string="Group by..">
+                    	<filter string="Customer" icon="terp-personal" domain="[]" context="{'group_by':'partner_id'}"/>
+                    	<filter string="Date" icon="terp-personal" domain="[]" context="{'group_by':'sale_order_date'}"/>
+                   </group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="view_general_sales_report_graph" model="ir.ui.view">
+        	<field name="name">general.sales.report.graph</field>
+            <field name="model">general.sales.report</field>
+            <field name="arch" type="xml">
+            	<graph string="General Sales Report">
+            		<field name="partner_id" string="Customer"/>
+            		<field name="amount_total" string="Total Amount"/>
+            	</graph>
+            </field>
+        </record>
+        
+        <record id="view_general_sales_report_calendar" model="ir.ui.view">
+            <field name="name">general.sales.report.calendar</field>
+            <field name="model">general.sales.report</field>
+            <field name="arch" type="xml">
+                <calendar string="General Sales Report" color="sale_order_no" date_start="sale_order_date">
+                    <field name="partner_id"/>
+                    <field name="amount_total"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="action_general_sale_report" model="ir.actions.act_window">
+            <field name="name">General Sales Report</field>
+            <field name="res_model">general.sales.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph,form,calendar</field>
+            <field name="search_view_id" ref="view_general_sales_report_search"/>
+        </record>
+
+        <menuitem action="action_general_sale_report" id="menu_general_sale_report" parent="menu_general_sale_report_main" sequence="1"/>
+   		
+    </data>
+</openerp>

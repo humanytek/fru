@@ -1,0 +1,76 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* sfs_stock_real
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130819-231103\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-31 06:14+0000\n"
+"PO-Revision-Date: 2013-10-31 06:14+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sfs_stock_real
+#: field:stock.warehouse.qty.analysis,product_categ_id:0
+msgid "Category"
+msgstr "Categoria"
+
+#. module: sfs_stock_real
+#: view:stock.warehouse.qty.analysis:0
+msgid "Product Category"
+msgstr "Categoría de producto"
+
+#. module: sfs_stock_real
+#: view:stock.warehouse.qty.analysis:0
+#: field:stock.warehouse.qty.analysis,product_qty:0
+msgid "Real Stock"
+msgstr "Existencia Real"
+
+#. module: sfs_stock_real
+#: field:stock.warehouse.qty.analysis,product_id:0
+msgid "Description"
+msgstr "Descripcion"
+
+#. module: sfs_stock_real
+#: view:stock.warehouse.qty.analysis:0
+#: field:stock.warehouse.qty.analysis,sale_price:0
+msgid "Product Cost"
+msgstr "Costo"
+
+#. module: sfs_stock_real
+#: view:stock.warehouse.qty.analysis:0
+msgid "Group By..."
+msgstr "Group By..."
+
+#. module: sfs_stock_real
+#: field:stock.warehouse.qty.analysis,product_ref:0
+msgid "Code"
+msgstr "Codigo"
+
+#. module: sfs_stock_real
+#: model:ir.ui.menu,name:sfs_stock_real.menu_warehouse_stock_analysis
+msgid "Stock Real"
+msgstr "Stock Real"
+
+#. module: sfs_stock_real
+#: view:stock.warehouse.qty.analysis:0
+#: field:stock.warehouse.qty.analysis,warehouse_id:0
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: sfs_stock_real
+#: model:ir.actions.act_window,name:sfs_stock_real.view_warehouse_stock_ana_action
+#: view:stock.warehouse.qty.analysis:0
+msgid "Warehouse Stock Analysis"
+msgstr "Almacén Stock Análisis"
+
+#. module: sfs_stock_real
+#: model:ir.model,name:sfs_stock_real.model_stock_warehouse_qty_analysis
+msgid "Stock by warehouse analysis"
+msgstr "Stock por análisis de almacén"
+

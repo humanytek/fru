@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_stock_move_product_manager","stock.move_product_stock_manager","model_stock_move_product","stock.group_stock_manager",1,1,1,1
+"access_stock_move_product_user","stock.move_product_stock_user","model_stock_move_product","stock.group_stock_user",1,1,1,0
+"access_pricelist_select_stock_manager","pricelist.select_stockmanager","model_pricelist_select","stock.group_stock_manager",1,1,1,1
+"access_pricelist_select_stock_user","pricelist.select_stockuser","model_pricelist_select","stock.group_stock_user",1,1,1,0

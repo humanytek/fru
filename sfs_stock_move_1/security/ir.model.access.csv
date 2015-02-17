@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_pricelist_select_wizard_manager","pricelist.select.wizard_stock_manager","model_pricelist_select_wizard","stock.group_stock_manager",1,1,1,1
+"access_pricelist_select_wizard_user","pricelist.select.wizard_stock_user","model_pricelist_select_wizard","stock.group_stock_user",1,1,1,0
+"access_stock_movement_report_stock_manager","stock.movement_report_stockmanager","model_stock_movement_report","stock.group_stock_manager",1,1,1,1
+"access_stock_movement_report_stock_user","stock.movement_report_stock_user","model_stock_movement_report","stock.group_stock_user",1,1,1,0

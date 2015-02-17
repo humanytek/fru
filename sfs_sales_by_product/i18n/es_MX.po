@@ -1,0 +1,94 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* sfs_sales_by_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130819-231103\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-09 12:50+0000\n"
+"PO-Revision-Date: 2013-09-09 12:50+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sfs_sales_by_product
+#: view:sales.analysis_report:0
+#: field:sales.analysis_report,partner_id:0
+msgid "Customer"
+msgstr " Cliente"
+
+#. module: sfs_sales_by_product
+#: view:sales.analysis_report:0
+msgid "Sale Analysis"
+msgstr "Sale Analysis"
+
+#. module: sfs_sales_by_product
+#: field:sales.analysis_report,product_reference:0
+msgid "Product Reference"
+msgstr "Codigo"
+
+#. module: sfs_sales_by_product
+#: view:sales.analysis_report:0
+msgid "# of Amount"
+msgstr "# of Amount"
+
+#. module: sfs_sales_by_product
+#: field:sales.analysis_report,amount_total:0
+msgid "Total Amount"
+msgstr "Importe"
+
+#. module: sfs_sales_by_product
+#: view:sales.analysis_report:0
+msgid "Sale Order Analysis"
+msgstr "Sale Order Analysis"
+
+#. module: sfs_sales_by_product
+#: view:sales.analysis_report:0
+msgid "Sales Orders"
+msgstr "Sales Orders"
+
+#. module: sfs_sales_by_product
+#: view:sales.analysis_report:0
+msgid "Group By..."
+msgstr "Group By..."
+
+#. module: sfs_sales_by_product
+#: field:sales.analysis_report,price_unit:0
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+#. module: sfs_sales_by_product
+#: model:ir.model,name:sfs_sales_by_product.model_sales_analysis_report
+msgid "report on confirmed sale orders by product"
+msgstr "report on confirmed sale orders by product"
+
+#. module: sfs_sales_by_product
+#: field:sales.analysis_report,product_name:0
+msgid "Product Name"
+msgstr "Descripcion"
+
+#. module: sfs_sales_by_product
+#: view:sales.analysis_report:0
+#: field:sales.analysis_report,sale_order_date:0
+msgid "Date"
+msgstr "fecha"
+
+#. module: sfs_sales_by_product
+#: model:ir.ui.menu,name:sfs_sales_by_product.view_sale_order_analysis_report_menu_sub
+msgid "Sales by Product"
+msgstr "Ventas de Producto"
+
+#. module: sfs_sales_by_product
+#: model:ir.actions.act_window,name:sfs_sales_by_product.view_sale_order_analysis_report_action
+msgid "Sales by Product "
+msgstr "Ventas de Producto "
+
+#. module: sfs_sales_by_product
+#: field:sales.analysis_report,product_qty:0
+msgid "Quantity"
+msgstr "Cantidad"
+

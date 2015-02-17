@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_general_sales_report_manager","general.sales.report_manager","model_general_sales_report","base.group_sale_salesman",1,1,1,0
+"access_general_sales_report_user","general.sales.report_user","model_general_sales_report","base.group_sale_manager",1,1,1,1

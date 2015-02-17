@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_sale_order_analysis_report_gaph" model="ir.ui.view" >
+            <field name="name">sales.analysis_report.graph</field>
+            <field name="model">sales.analysis_report</field>
+            <field name="arch" type="xml">
+            <graph string="Sale Order Analysis" version="7.0">
+            	<field name="product_name"/>
+            	<field name="amount_total"/>
+            </graph>
+            </field>
+        </record>
+       
+        <record id="view_sale_order_analysis_report_calendar" model="ir.ui.view">
+            <field name="name">sales.analysis_report.calenderr</field>
+            <field name="model">sales.analysis_report</field>
+            <field name="arch" type="xml">
+                <calendar string="Sales Orders" color="product_name" date_start="sale_order_date">
+                    <field name="partner_id"/>
+                    <field name="amount_total"/>
+                </calendar>
+            </field>
+        </record>
+        
+        <record id="view_sale_order_analysis_report_tree" model="ir.ui.view">
+            <field name="name">sales.analysis_report.tree</field>
+            <field name="model">sales.analysis_report</field>
+            <field name="arch" type="xml">
+                <tree string="Sale Order Analysis" create="false" version="7.0">
+                    <field name="sale_order_date"/>
+                    <field name="product_reference" />
+                    <field name="product_name" />
+                    <field name="price_unit" />
+                    <field name="product_qty" sum="Total Quantity"/>
+                    <field name="partner_id"/>
+                    <field name="amount_total" sum="# of Amount"/>                   
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_sale_order_analysis_report_form" model="ir.ui.view">
+            <field name="name">sales.analysis_report.form</field>
+            <field name="model">sales.analysis_report</field>
+            <field name="arch" type="xml">
+                <form string="Sale Order Analysis" create="false" version="7.0">
+                <sheet>
+                <group col="4" colspan="4">
+                    <field name="sale_order_date" readonly="1"/>
+                    <field name="product_reference" readonly="1"/>
+                    <field name="product_name" readonly="1"/>
+                    <field name="price_unit" readonly="1"/>
+                    <field name="product_qty" readonly="1"/>
+                    <field name="partner_id" readonly="1"/>
+                    </group>
+                </sheet>   
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_sale_order_analysis_report_search" model="ir.ui.view">
+            <field name="name">sales.analysis_report.search</field>
+            <field name="model">sales.analysis_report</field>
+            <field name="arch" type="xml">
+                <search string="Sale Analysis">
+                	<field name="partner_id"/>
+                	<field name="sale_order_date"/>
+                   <group expand="0" string="Group By...">
+                        <filter string="Customer" icon="terp-personal" domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Date" icon="terp-personal" domain="[]" context="{'group_by':'sale_order_date'}"/>
+                    </group>                    
+                </search>
+            </field>
+        </record>
+        
+         <record id="view_sale_order_analysis_report_action" model="ir.actions.act_window">
+            <field name="name">Sales by Product </field>
+            <field name="res_model">sales.analysis_report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph,calendar</field>
+            <field name="search_view_id" ref="view_sale_order_analysis_report_search"/>
+        </record>
+ 
+        <menuitem action="view_sale_order_analysis_report_action" id="view_sale_order_analysis_report_menu_sub" name="Sales by Product" parent="sfs_general_sales.menu_general_sale_report_main" sequence="2"/>
+    </data>
+</openerp>

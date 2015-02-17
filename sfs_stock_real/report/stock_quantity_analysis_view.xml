@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        
+        <record id="view_warehouse_stock_ana_tree" model="ir.ui.view">
+            <field name="name">warehouse.stock.ana.tree</field>
+            <field name="model">stock.warehouse.qty.analysis</field>
+            <field name="arch" type="xml">
+                <tree string="Warehouse Stock Analysis" create="false" version="7.0">
+                    <field name="product_ref"/>
+                    <field name="product_id"/>
+                    <field name="product_categ_id"/>
+                    <field name="warehouse_id"/>
+                    <field name="sale_price" sum="Product Cost"/>
+                    <field name="product_qty" sum="Real Stock"/>
+                    <field name="total_value" sum="Total Value"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="view_warehouse_stock_ana_form" model="ir.ui.view">
+            <field name="name">warehouse.stock.ana.form</field>
+            <field name="model">stock.warehouse.qty.analysis</field>
+            <field name="arch" type="xml">
+                <form string="Warehouse Stock Analysis" create="false" version="7.0">
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="product_ref" readonly="1"/>
+                            <field name="product_id" readonly="1"/>
+                            <field name="product_categ_id" readonly="1"/>
+                            <field name="warehouse_id" readonly="1"/>
+                            <field name="sale_price" readonly="1"/>
+                            <field name="product_qty" readonly="1"/>
+                            <field name="total_value" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_warehouse_stock_ana_search" model="ir.ui.view">
+            <field name="name">warehouse.stock.ana.search</field>
+            <field name="model">stock.warehouse.qty.analysis</field>
+            <field name="arch" type="xml">
+                <search string="Warehouse Stock Analysis">
+                    <field name="product_categ_id"/>
+                    <field name="warehouse_id"/>
+                    <field name="product_id"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Product Category" domain="[]" context="{'group_by':'product_categ_id'}"/>
+                        <filter string="Warehouse" domain="[]" context="{'group_by':'warehouse_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="view_warehouse_stock_ana_action" model="ir.actions.act_window">
+            <field name="name">Warehouse Stock Analysis</field>
+            <field name="res_model">stock.warehouse.qty.analysis</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_warehouse_stock_ana_search"/>
+        </record>
+        
+        <menuitem action="view_warehouse_stock_ana_action" id="menu_warehouse_stock_analysis" name="Stock Real" parent="sfs_stock_move_1.view_stock_movement_report_sub" sequence="2"/>
+        
+    </data>
+</openerp>
